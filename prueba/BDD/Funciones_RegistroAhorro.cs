@@ -50,6 +50,8 @@ namespace prueba.BDD
             }
         }
 
+     
+
 
         //la utilizo para encontrar el objetivo al que el usuario le quiere agregar ahorro y poder agregar el nuevo ahorro.
         public static int ObtenerIdPorNombre(string nombre)

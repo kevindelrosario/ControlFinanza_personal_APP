@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using finanzasApp.BDD;
 using prueba;
+using prueba.BDD;
 
 namespace finanzasApp
 {
@@ -28,6 +29,7 @@ namespace finanzasApp
         //Encargada de recargar los datos de la interfaz
         public void recargar()
         {
+            cargarTotalAhorros();
             mostrarMovimientos();
             obtenerTotal_ingresos();
             obtenerTotal_gastos();
@@ -105,6 +107,10 @@ namespace finanzasApp
             Funciones_RegistroMovimiento.EliminarTodosLosMovimientos();
             recargar(); 
             }
+        }
+        public void cargarTotalAhorros()
+        {
+            lbAhorro.Text = Funciones_RegistroAhorro.ObtenerTotalAhorros().ToString();
         }
         public void eliminarMovimiento() {
 

@@ -40,6 +40,8 @@ namespace prueba
             gridTotales.DataSource = datos;
         }
 
+
+
         public void agregarAhorro()
         {
             
