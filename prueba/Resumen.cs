@@ -150,5 +150,12 @@ namespace finanzasApp
             }
             
         }
+
+        private void btAhorro_Click(object sender, EventArgs e)
+        {
+            Ahorros ahorro = new Ahorros();
+            ahorro.ShowDialog();
+            recargar();
+        }
     }
 }

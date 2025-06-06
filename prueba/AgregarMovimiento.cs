@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static prueba.BDD.Categoria;
 
 namespace prueba
 {
@@ -16,8 +17,13 @@ namespace prueba
         public int id;
         public AgregarMovimiento()
         {
+
             InitializeComponent();
+            this.Load += Form1_Load;
         }
+
+
+
         public AgregarMovimiento(string tex,int id , string tipo,string monto, string categoria, string descripcion, DateTime fecha)
         {
             InitializeComponent();
@@ -77,6 +83,13 @@ namespace prueba
                  
             Funciones_RegistroMovimiento.EditarMovimiento(mv);
             this.Close(); //cerramos el modal
+        }
+
+        //evento para mostrar las categorias que quiero tener ingresadas
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboCategoria.Items.AddRange(Categorias.Todas);
+            comboTipo.Items.AddRange(Tipo.Todas);
         }
     }
 }

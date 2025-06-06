@@ -43,3 +43,4 @@ C:\Users\kevin\source\repos\prueba\prueba\obj\Debug\prueba.pdb
 C:\Users\kevin\source\repos\prueba\prueba\obj\Debug\prueba.menu.resources
 C:\Users\kevin\source\repos\prueba\prueba\obj\Debug\finanzasApp.Resumen.resources
 C:\Users\kevin\source\repos\prueba\prueba\obj\Debug\prueba.AgregarMovimiento.resources
+C:\Users\kevin\source\repos\prueba\prueba\obj\Debug\prueba.Ahorros.resources

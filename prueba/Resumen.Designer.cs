@@ -42,6 +42,8 @@ namespace finanzasApp
             this.lbTotalIngreso = new System.Windows.Forms.Label();
             this.lbTotalGasto = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btReiniciar = new System.Windows.Forms.Button();
+            this.lbId = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,8 +51,9 @@ namespace finanzasApp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbId = new System.Windows.Forms.Label();
-            this.btReiniciar = new System.Windows.Forms.Button();
+            this.lbAhorro = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btAhorro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Grafico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridMovimientos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,14 +72,14 @@ namespace finanzasApp
             this.Grafico.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.Grafico.Legends.Add(legend1);
-            this.Grafico.Location = new System.Drawing.Point(881, 79);
+            this.Grafico.Location = new System.Drawing.Point(788, 58);
             this.Grafico.Name = "Grafico";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series1.Legend = "Legend1";
             series1.Name = "Movimientos";
             this.Grafico.Series.Add(series1);
-            this.Grafico.Size = new System.Drawing.Size(358, 274);
+            this.Grafico.Size = new System.Drawing.Size(423, 260);
             this.Grafico.TabIndex = 0;
             this.Grafico.Text = "chart1";
             // 
@@ -170,6 +173,8 @@ namespace finanzasApp
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.lbAhorro);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btReiniciar);
             this.panel2.Controls.Add(this.lbId);
             this.panel2.Controls.Add(this.button3);
@@ -189,8 +194,31 @@ namespace finanzasApp
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1122, 707);
+            this.panel2.Size = new System.Drawing.Size(1321, 805);
             this.panel2.TabIndex = 14;
+            // 
+            // btReiniciar
+            // 
+            this.btReiniciar.BackColor = System.Drawing.Color.Crimson;
+            this.btReiniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReiniciar.ForeColor = System.Drawing.Color.White;
+            this.btReiniciar.Location = new System.Drawing.Point(999, 417);
+            this.btReiniciar.Name = "btReiniciar";
+            this.btReiniciar.Size = new System.Drawing.Size(73, 42);
+            this.btReiniciar.TabIndex = 19;
+            this.btReiniciar.Text = "Reiniciar \r\nValores";
+            this.btReiniciar.UseVisualStyleBackColor = false;
+            this.btReiniciar.Click += new System.EventHandler(this.btReiniciar_Click);
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(262, 398);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(15, 16);
+            this.lbId.TabIndex = 18;
+            this.lbId.Text = "0";
             // 
             // button3
             // 
@@ -215,11 +243,12 @@ namespace finanzasApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.btAhorro);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(86, 707);
+            this.panel1.Size = new System.Drawing.Size(86, 805);
             this.panel1.TabIndex = 15;
             // 
             // button1
@@ -266,28 +295,43 @@ namespace finanzasApp
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
-            // lbId
+            // lbAhorro
             // 
-            this.lbId.AutoSize = true;
-            this.lbId.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(262, 398);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(15, 16);
-            this.lbId.TabIndex = 18;
-            this.lbId.Text = "0";
+            this.lbAhorro.AutoSize = true;
+            this.lbAhorro.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAhorro.Location = new System.Drawing.Point(674, 245);
+            this.lbAhorro.Name = "lbAhorro";
+            this.lbAhorro.Size = new System.Drawing.Size(50, 26);
+            this.lbAhorro.TabIndex = 21;
+            this.lbAhorro.Text = "0.00";
             // 
-            // btReiniciar
+            // label6
             // 
-            this.btReiniciar.BackColor = System.Drawing.Color.Crimson;
-            this.btReiniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReiniciar.ForeColor = System.Drawing.Color.White;
-            this.btReiniciar.Location = new System.Drawing.Point(999, 417);
-            this.btReiniciar.Name = "btReiniciar";
-            this.btReiniciar.Size = new System.Drawing.Size(73, 42);
-            this.btReiniciar.TabIndex = 19;
-            this.btReiniciar.Text = "Reiniciar \r\nValores";
-            this.btReiniciar.UseVisualStyleBackColor = false;
-            this.btReiniciar.Click += new System.EventHandler(this.btReiniciar_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(676, 230);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 15);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Ahorros";
+            // 
+            // btAhorro
+            // 
+            this.btAhorro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btAhorro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btAhorro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btAhorro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAhorro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAhorro.ForeColor = System.Drawing.Color.Transparent;
+            this.btAhorro.Location = new System.Drawing.Point(0, 45);
+            this.btAhorro.Margin = new System.Windows.Forms.Padding(0);
+            this.btAhorro.Name = "btAhorro";
+            this.btAhorro.Size = new System.Drawing.Size(86, 45);
+            this.btAhorro.TabIndex = 1;
+            this.btAhorro.Text = "Agregar\r\nAhorro";
+            this.btAhorro.UseVisualStyleBackColor = true;
+            this.btAhorro.Click += new System.EventHandler(this.btAhorro_Click);
             // 
             // Resumen
             // 
@@ -330,6 +374,9 @@ namespace finanzasApp
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.Button btReiniciar;
+        private System.Windows.Forms.Label lbAhorro;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btAhorro;
     }
 }
 

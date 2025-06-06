@@ -105,9 +105,19 @@
     <Compile Include="AgregarMovimiento.Designer.cs">
       <DependentUpon>AgregarMovimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ahorros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ahorros.Designer.cs">
+      <DependentUpon>Ahorros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BDD\Ahorro.cs" />
+    <Compile Include="BDD\Categoria.cs" />
     <Compile Include="BDD\Conexion.cs" />
+    <Compile Include="BDD\Funciones_RegistroAhorro.cs" />
     <Compile Include="BDD\Funciones_RegistroMovimiento.cs" />
     <Compile Include="BDD\Movimientos.cs" />
+    <Compile Include="BDD\ObjetivoAhorro.cs" />
     <Compile Include="Resumen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AgregarMovimiento.resx">
       <DependentUpon>AgregarMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ahorros.resx">
+      <DependentUpon>Ahorros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resumen.resx">
       <DependentUpon>Resumen.cs</DependentUpon>
